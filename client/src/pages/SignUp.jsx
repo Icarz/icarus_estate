@@ -71,7 +71,7 @@ const SignUp = () => {
           className="bg-slate-600 text-white rounded-lg p-3 uppercase
          hover:opacity-95 disabled:opacity-80"
         >
-          {loading ? "loading ..." : "Sign Up"}
+          {loading ? "loading please wait ..." : "Sign Up"}
         </button>
       </form>
       <div className="flex gap-2 mt-5">

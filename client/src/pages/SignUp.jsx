@@ -35,7 +35,7 @@ const SignUp = () => {
     } catch (error) {
       setError(error.message);
     }
-    setLoading(false); // Reset loading state after success or error
+    setLoading(false);
     navigate("/sign_in");
   };
 
@@ -74,6 +74,8 @@ const SignUp = () => {
           {loading ? "loading please wait ..." : "Sign Up"}
         </button>
       </form>
+      {/* Use error state here */}
+      {error && <p className="text-red-600 mt-3 text-center">{error}</p>}
       <div className="flex gap-2 mt-5">
         <p>have an account?</p>
         <Link to={"/sign_in"}>

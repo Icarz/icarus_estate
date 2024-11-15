@@ -6,6 +6,7 @@ import {
   signInSuccess,
   signInFailure,
 } from "../redux/user/userSlice";
+import Oauth from "../components/Oauth";
 const SignIn = () => {
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
@@ -70,6 +71,7 @@ const SignIn = () => {
         >
           {loading ? "loading please wait ..." : "LOG IN"}
         </button>
+        <Oauth/>
       </form>
       {/* Use error state here */}
       {error && <p className="text-red-600 mt-3 text-center">{error}</p>}
